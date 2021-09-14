@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Login Sign-up Form With Validation
+    </title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <b><label>Full Name*</label></b><label class="validation-error hide" id="fullNameValidationError">This Field Cannot be left empty</label>
+                        <input type="text" name="fullName" id="fullName">
+                     </div>
+                     <div>
+                       <b> <label> Choose Gender</label></b>
+                       
+
+                        <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        </select>
+                     </div>
+                     <div>
+                        <b><label>Status</label></b>
+                        <input type="text" name="status" id="status">
+                        
+                     </div>
+                     <div>
+                        <b><label>City</label></b>
+                        <input type="text" name="city" id="city">
+                     </div>
+                     <div  class="form-action-buttons">
+                       <span> <b> <input type="submit" value="Submit" id = "submit" ></b></span>
+                     </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="code.js"></script>
+</body>
+
+</html>
